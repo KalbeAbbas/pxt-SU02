@@ -40,6 +40,9 @@ namespace SU02 {
         a = ((data & 0xFF00) >> 8);
         b = ((data & 0x00FF) >> 0);
 
+        console.logValue("a", a)
+        console.logValue("b", b)
+
         voltage = (((((a & 0x0F) * 256) + (b & 0xF0)) / 0x10) * (3.3 / 256));
 
         console.logValue("voltage", voltage)
